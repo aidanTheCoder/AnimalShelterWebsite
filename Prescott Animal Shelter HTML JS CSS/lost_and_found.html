@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>City of Prescott: Lost and Found</title>
+	<script src = "animal_search.js"></script>
+	<style>
+		h1 {
+			background-color: FireBrick;
+		}
+		a {
+			background-color: DarkSlateBlue;
+			color: white;
+			font-size: 72;
+		}
+	</style>
+	
+</head>
+<body>
+	<h1><img src = "prescott_logo.jpg" id = "prescott">Lost and Found</h1>
+	<img src = "granite_dells.jpg" id = "dells" width = 100% height = "auto"><br/>
+	<a href="missing_animal.html" id = "missing_animal_page">Register Missing Animal</a>
+	<form action = "connector.php" method = "get">
+	<div id = "selectAllBoxes">
+		<label>Animal Color</label>
+		<input type = "checkbox" onClick = "selectAll(this,'color')">Select/Deselect All<br/>
+		<input type = "checkbox" name = "color" value = "white">White<br/>
+		<input type = "checkbox" name = "color" value = "brown">Brown<br/>
+		<input type = "checkbox" name = "color" value = "black">Black<br/></p>
+		<p>Type of Animal</p>
+		<input type = "checkbox" onClick = "selectAll(this,'animalType')">Select/Deselect All<br/>
+		<input type = "checkbox" name = "animalType" value = "dog">Dog<br/>
+		<input type = "checkbox" name = "animalType" value = "cat">Cat<br/>
+		<input type = "checkbox" name = "animalType" value = "other">Other<br/>
+		<p>Animal Size</p>
+		<input type = "checkbox" onClick = "selectAll(this,'size')">Select/Deselect All<br/>
+		<input type = "checkbox" name = "size" value = "big">Big<br/>
+		<input type = "checkbox" name = "size" value = "medium">Medium<br/>
+		<input type = "checkbox" name = "size" value = "small">Small<br/>
+		<p>Animal Age</p>
+		<input type = "checkbox" onClick = "selectAll(this,'age')">Select/Deselect All<br/>
+		<input type = "checkbox" name = "age" value = "old">Old<br/>
+		<input type = "checkbox" name = "age" value = "middle-aged">Middle-Aged<br/>
+		<input type = "checkbox" name = "age" value = "young">Young<br/>
+		<p>Neutered</p>
+		<input type = "radio" name = "neuetered" value= "yes"> Yes
+		<input type = "radio" name = "neuetered" value= "no"> No
+		<input type = "radio" name = "neuetered" value= "not applicable"> N/A
+		
+		<input type = "submit" value = "Submit">
+	</div>
+	</form>
+</body>
+</html>
