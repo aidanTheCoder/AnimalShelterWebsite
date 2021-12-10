@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Register a Missing Animal</title>
+	<script src = "animal_search.js"></script>
+	<style>
+		#lost_and_found {
+			color: black;
+			vertical-align: center;
+			font-size: 36px;
+			float: right;
+			padding-top: 2%;
+			padding-right: 50%;
+		}
+		
+		#missing {
+			background-color: FireBrick;
+			color: white;
+			width: 100%;
+			heigth: ;
+			font-size: 42px;
+			font-family: Times, Times New Roman, serif;
+		}
+		
+		#missing_animal_page {
+			color: white;
+		}
+		
+		table {
+			background-color: rgb(160, 160, 190);
+			text-align: center-left;
+			table-layout: fixed;
+			font-size: auto;
+			padding: 1%;
+			float: left;
+			margin-bottom: 2%;
+		}
+		
+		
+		#act_but {
+			background-color: firebrick;
+			color: white;
+			font-size: 18px;
+			width: 100%;
+			height: 40%;
+			font-family: Times, Times New Roman, serif;
+		}	
+	</style>
+</head>
+<body>
+	<h1 style = "background-image: url(
+	https://upload.wikimedia.org/wikipedia/commons/1/1a/Prescott_-_Granite_Dells_%285171290158%29_%28cropped%29.jpg);">
+	<img src = "prescott.gif"><span id = "lost_and_found">Register a Missing Animal</span>
+	</h1>
+	<button id = "missing"><a href="lost_and_found.html" 
+		id = "missing_animal_page">Find the Right Animal For You!</a></button>
+	<hr>
+	<form action = "connector.php" method = "get" name = "missing_animal_form" 
+		onsubmit = "return checkMissingAnimalForm(this)">
+	<div id = "selectAllBoxes" align = "center">
+		<table style = "margin-left: 14%;">
+		<tr>
+		<td>
+		<label><b>Animal Color</b></label><br/>
+			<input type = "radio" name = "color" value = "white">White<br/>
+			<input type = "radio" name = "color" value = "brown">Brown<br/>
+			<input type = "radio" name = "color" value = "black">Black<br/>
+			<input type = "radio" name = "color" value = "gray">Gray<br/>
+			<input type = "radio" name = "color" value = "mixed">Mixed<br/>
+		</td>
+		<td>
+			<label><b>Type of Animal</b></label><br/>
+			<input type = "radio" name = "animalType" value = "dog">Dog<br/>
+			<input type = "radio" name = "animalType" value = "cat">Cat<br/>
+			<input type = "radio" name = "animalType" value = "other">Other<br/>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<br/><label><b>Animal Size</b></label><br/>
+			<input type = "radio" name = "size" value = "large">Large<br/>
+			<input type = "radio" name = "size" value = "medium">Medium<br/>
+			<input type = "radio" name = "size" value = "small">Small<br/>
+		</td>
+		<td>
+			<br/><label><b>Animal Age</b></label><br/>
+			<input type = "radio" name = "age" value = "old">Old<br/>
+			<input type = "radio" name = "age" value = "middle-aged">Middle-Aged<br/>
+			<input type = "radio" name = "age" value = "young">Young<br/>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<br/><label><b>Neuetered</b></label><br/>
+			<input type = "radio" name = "neuetered" value= "yes"> Yes<br/>
+			<input type = "radio" name = "neuetered" value= "no"> No<br/>
+		</td>
+		<td>
+			<label><b>Gender</b></label><br/>
+			<input type = "radio" name = "gender" value= "yes">Male<br/>
+			<input type = "radio" name = "gender" value= "yes">Female<br/>
+		</td>
+		</tr>	
+		<tr>
+		<td>
+			<label><b>Breed</b></label><br/>
+			<select name = "breed" id = "breed" 
+				onclick = "chooseBreed(missing_animal_form.animalType.value)" 
+				onchange = "getBreed()">
+				<option>Select a breed</option>
+			</select>
+		</td>
+		</tr>
+	</table>
+	<table style = "margin-left: 1%;">
+		<tr>
+			<td>Last known date: <input type = "date" name = "last_day_seen"><br/></td>
+			<td>Last known location: <input type = "text" name = "last_location"><br/></tr>
+		</tr>
+		<tr>
+		<td>Email Address: <input type = "email" name = "userEmail" value = "Enter Email"><br/></td>
+		<td>Confirm Email Address: <input type = "email" name = "confirmEmail" 
+			value = "Confirm Email"><br/></td>
+		</tr>
+		<tr>
+		<td>Phone Number: <input type = "tel" name = "phoneNumber" value = "phone"><br/></td>
+		<td>Address:<input type = "text" name = "address"><br/></td>
+		</tr>
+		<tr>
+		<td>
+			<span id = "action">
+				<br/><input type = "submit" value = "Submit" id = "act_but"><br/>
+				<br/><input type = "reset" value= "Reset" id = "act_but">
+			</span>
+		</td>
+		</tr>
+	</table>
+	</div>
+	</form>
+</body>
+</html>
