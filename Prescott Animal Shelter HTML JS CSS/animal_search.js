@@ -92,12 +92,12 @@ function populateDropdown(animalArray, dropDownID) {
 var dogs = ['Not selected', 'poodle', 'beagle', 'pug',
 	'german shepard', 'mix', 'pitbull', 'terrier', 'boxer',
 	'chihuahua', 'maltese', 'labrador', 'husky', 'bull dog',
-	'not listed'];	
+	'not listed/unknown'];	
 var cats = ['Not selected', 'domestic shorthair', 'siamese',
 	'domestic mediumhair', 'american shorthair', 'tabby', 'bombay',
 	'not listed/unknown'];
 var other = ['Not selected', 'Mustang', 'Arabian', 'quarterhorse',
-	'appaloosa', 'not listed'];
+	'appaloosa', 'not listed/unknown'];
 	
 function chooseBreed(animalType) {
 	if(animalType == 'dog')
