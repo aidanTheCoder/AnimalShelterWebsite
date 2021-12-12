@@ -90,9 +90,11 @@
 			<label><b>Animal Color</b></label><br/>
 			<input type = "checkbox" 
 			onClick = "selectAll(this,'color')">Select/Deselect All<br/>
-			<input type = "checkbox" name = "color" value = "white">White<br/>
-			<input type = "checkbox" name = "color" value = "brown">Brown<br/>
-			<input type = "checkbox" name = "color" value = "black">Black<br/>
+			<input type = "radio" name = "color" value = "white">White<br/>
+			<input type = "radio" name = "color" value = "brown">Brown<br/>
+			<input type = "radio" name = "color" value = "black">Black<br/>
+			<input type = "radio" name = "color" value = "gray">Gray<br/>
+			<input type = "radio" name = "color" value = "mixed">Mixed<br/>
 		</td>
 		<td>
 			<label><b>Type of Animal</b></label><br/>
@@ -103,22 +105,15 @@
 	<tr>
 		<td>
 			<br/><label><b>Animal Size</b></label><br/>
-			<input type = "checkbox" 
-			onClick = "selectAll(this,'size')">Select/Deselect All<br/>
-			<input type = "checkbox" name = "size" value = "big">Big<br/>
-			<input type = "checkbox" name = "size" value = "medium">Medium<br/>
-			<input type = "checkbox" name = "size" value = "small">Small<br/>
+			<input type = "radio" name = "size" value = "big">Big<br/>
+			<input type = "radio" name = "size" value = "medium">Medium<br/>
+			<input type = "radio" name = "size" value = "small">Small<br/>
 		</td>
 		<td>
 			<br/><label><b>Animal Age</b></label><br/>
-			<input type = "checkbox" 
-			onClick = "selectAll(this,'age')">Select/Deselect All<br/>
-			<input type = "checkbox" name = "age" 
-			value = "old">Old<br/>
-			<input type = "checkbox" name = "age" 
-			value = "middle-aged">Middle-Aged<br/>
-			<input type = "checkbox" name = "age" 
-			value = "young">Young<br/>
+			<input type = "radio" name = "age" value = "old">Old<br/>
+			<input type = "radio" name = "age" value = "middle-aged">Middle-Aged<br/>
+			<input type = "radio" name = "age" value = "young">Young<br/>
 		</td>
 	</tr>
 	<tr>
