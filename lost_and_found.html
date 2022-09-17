@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>City of Prescott: Lost and Found</title>
+	<script src = "animal_search.js"></script>
+	<style>
+		#lost_and_found {
+			color: black;
+			vertical-align: center;
+			font-size: 48px;
+			float: right;
+			padding-top: 2%;
+			padding-right: 50%;
+		}
+		
+		#missing {
+			background-color: FireBrick;
+			color: white;
+			width: 100%;
+			heigth: ;
+			font-size: 42px;
+			font-family: Times, Times New Roman, serif;
+		}
+		
+		#missing_animal_page {
+			color: white;
+		}
+		
+		#appearance {
+			text-align: center-left;
+			font-size: 24px;
+			padding: 1%;
+			float: left;
+			margin-left: 20%;
+		}
+		
+		td {
+			text-align: center-left;
+			padding: 10px;
+		}
+		
+		th {
+			text-align: left;
+		}
+		
+		table {
+			table-layout: fixed;
+			display: inline;
+			background-color: rgb(160, 160, 190);
+			border-color: white;	
+			align: center;
+			margin-bottom: 2%
+			margin-left: 2%;
+		}
+		
+		#characteristics {
+			table-layout: fixed;
+			font-size: 24px;
+			margin-right: 20%;
+			margin-left: 2%;
+			float: left;
+		}
+		
+		#act_but {
+		font-family: Times, Times New Roman, serif;
+			background-color: firebrick;
+			color: white;
+			font-size: 18px;
+			width: 100%;
+			height: 40%;
+			margin-bottom: 10%; 
+			margin-top: 10%;
+		}		
+		
+	</style>
+</head>
+<body style = "wrap;">
+	<h1 style = "background-image: url(
+		https://upload.wikimedia.org/wikipedia/commons/1/1a/Prescott_-_Granite_Dells_%285171290158%29_%28cropped%29.jpg);">
+		<img src = "prescott.gif">><span id = "lost_and_found">Lost and Found</span>
+	</h1>
+	<button id = "missing"><a href="missing_animal.html"
+			id = "missing_animal_page">Register Missing Animal</a></button>
+	<hr>
+	<form action = "connector.php" method = "get" name = "animal_search_form">
+	<div id = "selectAllBoxes">
+	<table id = "appearance">
+	<tr>
+		<td>
+			<label><b>Animal Color</b></label><br/>
+			<input type = "checkbox" 
+			onClick = "selectAll(this,'color')">Select/Deselect All<br/>
+			<input type = "radio" name = "color" value = "white">White<br/>
+			<input type = "radio" name = "color" value = "brown">Brown<br/>
+			<input type = "radio" name = "color" value = "black">Black<br/>
+			<input type = "radio" name = "color" value = "gray">Gray<br/>
+			<input type = "radio" name = "color" value = "mixed">Mixed<br/>
+		</td>
+		<td>
+			<label><b>Type of Animal</b></label><br/>
+			<input type = "radio" name = "animalType" value = "dog">Dog<br/>
+			<input type = "radio" name = "animalType" value = "cat">Cat<br/>
+			<input type = "radio" name = "animalType" value = "other">Other<br/>
+		</td>
+	<tr>
+		<td>
+			<br/><label><b>Animal Size</b></label><br/>
+			<input type = "radio" name = "size" value = "big">Big<br/>
+			<input type = "radio" name = "size" value = "medium">Medium<br/>
+			<input type = "radio" name = "size" value = "small">Small<br/>
+		</td>
+		<td>
+			<br/><label><b>Animal Age</b></label><br/>
+			<input type = "radio" name = "age" value = "old">Old<br/>
+			<input type = "radio" name = "age" value = "middle-aged">Middle-Aged<br/>
+			<input type = "radio" name = "age" value = "young">Young<br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label><b>Breed</b></label><br/>
+			<select name = "breed" id = "breed" 
+			onclick = "chooseBreed(animal_search_form.animalType.value)" 
+			onchange = "getBreed()">
+				<option>Select a breed</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<table id = "characteristics">
+		<tr>
+			<td>
+				<label><b>Neuetered</b></label><br/>
+				<input type = "radio" name = "neuetered" value= "yes"> Yes<br/>
+				<input type = "radio" name = "neuetered" value= "no"> No<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label><b>Gender</b></label><br/>
+				<input type = "radio" name = "gender" value= "yes">Male<br/>
+				<input type = "radio" name = "gender" value= "yes">Female<br/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label><b>Looking to adopt?</b></label><br/>
+				<input type = "radio" name = "adopt" value= "yes"> Yes<br/>
+				<input type = "radio" name = "adopt" value= "no"> No<br/>
+				<span id = "action">
+					<input type = "submit" value = "Submit" id = "act_but"><br/>
+					<input type = "reset" value= "Reset" id = "act_but">
+				</span>
+			</td>
+	</table>
+	</div>
+	</form>
+</body>
+</html>
